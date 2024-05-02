@@ -1,0 +1,57 @@
+.userContent{
+    width: 400px;
+    margin: 80px auto 0;
+    text-align: left;
+    background-color: white;
+    padding: 29px 25px;
+    position: relative;
+    border-radius: 15px;
+    box-shadow: 0px 4px 16px 0px #33333314;
+}
+.userContent svg {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    background-color: #6E41E2;
+    border-radius: 50%;
+    padding: 5px;
+}
+.userContent h3{
+    margin: 0 0 10px;
+    font-family: Montserrat;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 40px;
+}
+.userContent .headContent p{
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+}
+.userContent .info input{
+    display: block;
+    width: 90%;
+    padding: 15px 20px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 6px;
+    border-radius: 6px;
+    box-shadow: 0px 4px 16px 0px #33333314;
+}
+.userContent .info select{
+    border-radius: 6px;
+    padding: 15px 20px;
+    width: 100%;
+    border: none;
+    box-shadow: 0px 4px 16px 0px #33333314;
+    margin-bottom: 20px;
+}
+.userContent .send{
+    padding: 10px 15px;
+    border: none;
+    color: white;
+    border-radius: 6px;
+    background-color: #6E41E2;
+    cursor: pointer;
+}

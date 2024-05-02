@@ -1,0 +1,47 @@
+.fileBox > form {
+    position: relative;
+    margin: 50px auto 0;
+    padding: 15px 20px;
+    width: 650px;
+    text-align: left;
+    box-shadow: 0px 4px 16px 0px #33333314;
+    border-radius: 10px;
+    background-color: white;
+}
+.fileBox .uploadFile input{
+    display: none;
+    text-align: left;
+}
+.fileBox .uploadFile label{
+    cursor: pointer;
+}
+.fileBox .uploadFile label span{
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: left;
+
+}
+.fileBox .uploadFile label .blue{
+    color: #6E41E2;
+}
+.fileBox .uploadFile label p{
+    color: #1111117A;
+    font-family: Roboto;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 20px;
+    text-align: left;
+}
+.fileBox .resetbtn{
+    position: absolute;
+    bottom: -50px;
+    right: 0;
+    background: none;
+    border: 2px solid #6E41E2;
+    padding: 8px 12px;
+    border-radius: 4px;
+    color: #6E41E2;
+    cursor: pointer;
+}
