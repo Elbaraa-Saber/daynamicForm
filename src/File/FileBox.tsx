@@ -1,8 +1,15 @@
 import * as React from 'react';
 import { useState } from 'react';
 import './fileBox.css'
+import UserContact from '../UserContact/UserContact.tsx';
+
 function FileBox(){
     const [selectedFile, setSelectedFile] = useState<File | null>(null);
+    const [header, setHeader] = useState<string | null>(null);
+    const [description, setDescription] = useState<string | null>(null);
+    const [fields, setFields] = useState([]);
+    const [buttons, setButtons] = useState([]);
+
     const handleFileChange = (event: React.ChangeEvent<HTMLInputElement>) => {
         const file = event.target.files?.[0];
         if (file) {
@@ -16,7 +23,31 @@ function FileBox(){
             reader.onload = (e) => {
                 if (e.target && e.target.result) {
                     const fileContent = e.target.result.toString();
-                    console.log('File content:', fileContent);
+                    try {
+                        const jsonData = JSON.parse(fileContent);
+                        if (jsonData.form_name && jsonData.form_name.trim() !== '') {
+                            setHeader(jsonData.form_name);
+                        } else {
+                            setHeader(null);
+                        }
+                        if (jsonData.form_description && jsonData.form_description.trim() !== '') {
+                            setDescription(jsonData.form_description);
+                        } else {
+                            setDescription(null);
+                        }
+                        if (jsonData.form_fields && Array.isArray(jsonData.form_fields)) {
+                            setFields(jsonData.form_fields);
+                        } else {
+                            setFields([]);
+                        }
+                        if (jsonData.form_buttons && Array.isArray(jsonData.form_buttons)) {
+                            setButtons(jsonData.form_buttons);
+                        } else {
+                            setButtons([]);
+                        }
+                    } catch (error) {
+                        console.error('Error parsing JSON:', error);
+                    }
                 }
             };
             reader.readAsText(selectedFile);
@@ -24,7 +55,7 @@ function FileBox(){
     };
     return(
         <div className="fileBox">
-            <form onSubmit={handleSubmit}>
+            <form className='main-form' onSubmit={handleSubmit}>
                 <form className='uploadFile'>
                     <input id='file' type="file" name="filename" onChange={handleFileChange} accept=".json"/>
                     <label htmlFor='file'>
@@ -35,13 +66,14 @@ function FileBox(){
                         ) : (
                             <>
                                 <span><span className='blue'>Select a file </span>or drag in form</span>
-                                <p>PNG, jpg, gif files up to 10 MB in size are available for download</p>
+                                <p>Just we accept Json files</p>
                             </>
                         )}
                     </label>
                 </form>
                 <input className='resetbtn' type="submit" value='Reset'/>
             </form>
+            <UserContact header={header} description={description} fields={fields} buttons={buttons}/>
         </div>
     )
 }

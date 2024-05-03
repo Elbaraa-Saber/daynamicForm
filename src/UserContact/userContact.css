@@ -15,6 +15,10 @@
     background-color: #6E41E2;
     border-radius: 50%;
     padding: 5px;
+    cursor: pointer;
+}
+.userContent svg:hover{
+    background-color: cf3636;
 }
 .userContent h3{
     margin: 0 0 10px;
@@ -29,11 +33,15 @@
     font-weight: 400;
     line-height: 24px;
 }
+.userContent .info label{
+    margin-left: 20px;
+    color: #1111117A;
+}
 .userContent .info input{
     display: block;
     width: 90%;
     padding: 15px 20px;
-    margin-bottom: 20px;
+    margin: 10px 0 20px 0;
     border: none;
     border-radius: 6px;
     border-radius: 6px;
@@ -54,4 +62,7 @@
     border-radius: 6px;
     background-color: #6E41E2;
     cursor: pointer;
+}
+.userContent .send:hover{
+    background-color: #4a1eb9;
 }
