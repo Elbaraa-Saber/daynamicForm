@@ -8,10 +8,10 @@
     border-radius: 15px;
     box-shadow: 0px 4px 16px 0px #33333314;
 }
-.userContent.disApper{
+.userContent.disAppear{
     display: none;
 }
-.userContent.apper{
+.userContent.appear{
     display: block;
 }
 .userContent svg {

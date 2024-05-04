@@ -21,8 +21,8 @@ function FileBox(){
         const file = event.target.files?.[0];
         if (file) {
             setSelectedFile(file);
-            disFormRef.current?.classList.add('apper'); 
-            disFormRef.current?.classList.remove('disApper');
+            disFormRef.current?.classList.add('appear'); 
+            disFormRef.current?.classList.remove('disAppear');
         }
     };
 
@@ -54,7 +54,7 @@ function FileBox(){
                         } else {
                             setButtons([]);
                         }
-                        disFormRef.current?.classList.add('disApper'); 
+                        disFormRef.current?.classList.add('disAppear'); 
                     } catch (error) {
                         console.error('Error parsing JSON:', error);
                     }
@@ -70,8 +70,8 @@ function FileBox(){
         setDescription(null);
         setFields([]);
         setButtons([]);
-        disFormRef.current?.classList.add('disApper'); 
-        disFormRef.current?.classList.remove('apper'); 
+        disFormRef.current?.classList.add('disAppear'); 
+        disFormRef.current?.classList.remove('appear'); 
     };
 
     return(
@@ -94,7 +94,7 @@ function FileBox(){
                 </form>
                 <input className='resetbtn' type="reset" value='Reset' onClick={handleReset}/>
             </form>
-            <div id="user-form" className='userContent disApper' ref={disFormRef}>
+            <div id="user-form" className='userContent disAppear' ref={disFormRef}>
                 <UserContact header={header} description={description} fields={fields} buttons={buttons}/>
             </div>
         </div>
