@@ -8,10 +8,10 @@
     border-radius: 15px;
     box-shadow: 0px 4px 16px 0px #33333314;
 }
-.userContent.disAppear{
+.disAppear{
     display: none;
 }
-.userContent.appear{
+.appear{
     display: block;
 }
 .userContent svg {
@@ -73,4 +73,54 @@
 }
 .userContent .send:hover{
     background-color: #4a1eb9;
+}
+.field{
+    position: relative;
+}
+.field .notValid{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 90px;
+    background-color: #6E41E2;
+    padding: 10px 15px;
+    box-shadow: 0px 4px 16px 0px #333;
+    border-radius: 7px;
+    z-index: 100;
+    color: white;
+}
+.field .notValid::before{
+    content: '';
+    position: absolute;
+    top: -25px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-width: 10px 10px 15px 10px;
+    border-style: solid;
+    border-color: transparent transparent #6E41E2 transparent;
+}
+@media(max-width: 1023px){
+    .userContent{
+        width: 500px;
+    }
+}
+@media (max-width: 767px){
+    .userContent{
+        width: 350px;
+    }
+}
+@media (max-width: 600px){
+    .userContent{
+        width: 300px;
+    }
+}
+@media (max-width: 480px){
+    .userContent{
+        width: 275px;
+    }
+}
+@media (max-width: 375px){
+    .userContent{
+        width: 250px;
+    }
 }

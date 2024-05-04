@@ -50,3 +50,29 @@
     background-color: #6E41E2;
     color: white;
 }
+
+@media (max-width: 1023px){
+    .fileBox > .main-form{
+        width: 700px;
+    }
+}
+@media (max-width: 767px){
+    .fileBox > .main-form{
+        width: 500px;
+    }
+}
+@media (max-width: 600px){
+    .fileBox > .main-form{
+        width: 400px;
+    }
+}
+@media (max-width: 480px){
+    .fileBox > .main-form{
+        width: 350px;
+    }
+}
+@media (max-width: 375px){
+    .fileBox > .main-form{
+        width: 300px;
+    }
+}
