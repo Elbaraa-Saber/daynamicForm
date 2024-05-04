@@ -6,8 +6,9 @@ function UserContact (props){
     const description = props.description;
     const fields = props.fields;
     const buttons = props.buttons;
+
     return(
-        <form className="userContent">
+        <form>
             <div className="headContent">
                 <h3>{header}</h3>
                 <p>{description}</p>

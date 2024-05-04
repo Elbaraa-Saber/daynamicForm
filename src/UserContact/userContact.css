@@ -8,6 +8,12 @@
     border-radius: 15px;
     box-shadow: 0px 4px 16px 0px #33333314;
 }
+.userContent.disApper{
+    display: none;
+}
+.userContent.apper{
+    display: block;
+}
 .userContent svg {
     position: absolute;
     right: 20px;
@@ -15,10 +21,11 @@
     background-color: #6E41E2;
     border-radius: 50%;
     padding: 5px;
+    transition: 0.3s;
     cursor: pointer;
 }
 .userContent svg:hover{
-    background-color: cf3636;
+    background-color: #cf3636;
 }
 .userContent h3{
     margin: 0 0 10px;
@@ -62,6 +69,7 @@
     border-radius: 6px;
     background-color: #6E41E2;
     cursor: pointer;
+    transition: 0.3s;
 }
 .userContent .send:hover{
     background-color: #4a1eb9;

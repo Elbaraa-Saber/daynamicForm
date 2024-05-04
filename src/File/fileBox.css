@@ -44,4 +44,9 @@
     border-radius: 4px;
     color: #6E41E2;
     cursor: pointer;
+    transition: 0.5s;
+}
+.fileBox .resetbtn:hover{
+    background-color: #6E41E2;
+    color: white;
 }

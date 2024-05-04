@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { useState } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import './fileBox.css'
 import UserContact from '../UserContact/UserContact.tsx';
 
@@ -7,17 +7,26 @@ function FileBox(){
     const [selectedFile, setSelectedFile] = useState<File | null>(null);
     const [header, setHeader] = useState<string | null>(null);
     const [description, setDescription] = useState<string | null>(null);
-    const [fields, setFields] = useState([]);
-    const [buttons, setButtons] = useState([]);
+    const [fields, setFields] = useState<any[]>([]); 
+    const [buttons, setButtons] = useState<any[]>([]); 
+    const disFormRef = useRef<HTMLDivElement>(null);
+
+    useEffect(() => {
+        if (selectedFile) {
+            handleSubmit();
+        }
+    }, [selectedFile]); 
 
     const handleFileChange = (event: React.ChangeEvent<HTMLInputElement>) => {
         const file = event.target.files?.[0];
         if (file) {
             setSelectedFile(file);
+            disFormRef.current?.classList.add('apper'); 
+            disFormRef.current?.classList.remove('disApper');
         }
     };
-    const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
-        event.preventDefault();
+
+    const handleSubmit = () => {
         if (selectedFile) {
             const reader = new FileReader();
             reader.onload = (e) => {
@@ -45,6 +54,7 @@ function FileBox(){
                         } else {
                             setButtons([]);
                         }
+                        disFormRef.current?.classList.add('disApper'); 
                     } catch (error) {
                         console.error('Error parsing JSON:', error);
                     }
@@ -53,9 +63,20 @@ function FileBox(){
             reader.readAsText(selectedFile);
         }
     };
+
+    const handleReset = () => {
+        setSelectedFile(null);
+        setHeader(null);
+        setDescription(null);
+        setFields([]);
+        setButtons([]);
+        disFormRef.current?.classList.add('disApper'); 
+        disFormRef.current?.classList.remove('apper'); 
+    };
+
     return(
         <div className="fileBox">
-            <form className='main-form' onSubmit={handleSubmit}>
+            <form className='main-form'>
                 <form className='uploadFile'>
                     <input id='file' type="file" name="filename" onChange={handleFileChange} accept=".json"/>
                     <label htmlFor='file'>
@@ -71,9 +92,11 @@ function FileBox(){
                         )}
                     </label>
                 </form>
-                <input className='resetbtn' type="submit" value='Reset'/>
+                <input className='resetbtn' type="reset" value='Reset' onClick={handleReset}/>
             </form>
-            <UserContact header={header} description={description} fields={fields} buttons={buttons}/>
+            <div id="user-form" className='userContent disApper' ref={disFormRef}>
+                <UserContact header={header} description={description} fields={fields} buttons={buttons}/>
+            </div>
         </div>
     )
 }
