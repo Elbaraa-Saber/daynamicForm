@@ -28,13 +28,13 @@ function FileBox(){
 
     const uploadFile = () => {
         if (selectedFile) {
-            const reader = new FileReader(); //new FileReader()
-            reader.onload = (e) => { //reader.onload
-                if (e.target && e.target.result) { //e.target && e.target.result
-                    const fileContent = e.target.result.toString(); //const fileContent = e.target.result.toString();
+            const reader = new FileReader(); 
+            reader.onload = (e) => { 
+                if (e.target && e.target.result) { 
+                    const fileContent = e.target.result.toString(); 
                     try {
-                        const jsonData = JSON.parse(fileContent);  //JSON.parse(fileContent);
-                        if (jsonData.form_name && jsonData.form_name.trim() !== '') { //jsonData.form_name && jsonData.form_name.trim() !== ''
+                        const jsonData = JSON.parse(fileContent); 
+                        if (jsonData.form_name && jsonData.form_name.trim() !== '') { 
                             setHeader(jsonData.form_name);
                         } else {
                             setHeader(null);
@@ -44,7 +44,7 @@ function FileBox(){
                         } else {
                             setDescription(null);
                         }
-                        if (jsonData.form_fields && Array.isArray(jsonData.form_fields)) { //jsonData.form_fields && Array.isArray(jsonData.form_fields)
+                        if (jsonData.form_fields && Array.isArray(jsonData.form_fields)) { 
                             setFields(jsonData.form_fields);
                         } else {
                             setFields([]);
@@ -56,7 +56,7 @@ function FileBox(){
                         }
                         disFormRef.current?.classList.add('disAppear'); 
                     } catch (error) {
-                        console.error('Error parsing JSON:', error); //catch (error) {console.error('Error parsing JSON:', error);}
+                        console.error('Error parsing JSON:', error);
                     }
                 }
             };

@@ -1,13 +1,14 @@
 import React, { useState, useRef } from "react";
 import './userContact.css';
 interface FormData {
-    [key: string]: string; // Assuming all values are strings, adjust as needed
+    [key: string]: string;
 }
 
 function UserContact(props) {
-    const [formData, setFormData] = useState<FormData>({}); // Specify FormData as the type
-    const [fieldErrors, setFieldErrors] = useState<{ [key: string]: string }>({}); // Specify the type for fieldErrors
+    const [formData, setFormData] = useState<FormData>({}); 
+    const [fieldErrors, setFieldErrors] = useState<{ [key: string]: string }>({});
     const notCorrect = useRef<HTMLSpanElement>(null);
+    const { header, description, fields, buttons } = props;
 
     const handleInputChange = (e) => {
         const { id, value } = e.target;
@@ -49,10 +50,6 @@ function UserContact(props) {
             });
         }
     };
-    
-    
-
-    const { header, description, fields, buttons } = props;
 
     return (
         <form onSubmit={handleFormSubmit}>
