@@ -1,8 +1,55 @@
+# JSON PARSER
+
+## Описание проекта
+Динамический парсер форм представляет собой веб-приложение, целью которого является загрузка и отображение форм, описанных в формате JSON. Пользователь имеет возможность загрузить JSON файл с описанием формы, после чего происходит парсинг этого файла и динамическое создание соответствующей формы на странице.
+
+## Цель задания
+
+Основной целью данного задания является отработка следующих навыков:
+- Работа с DOM: Вам придется взаимодействовать с DOM для поиска и манипуляции элементами формы.
+
+
+- Работа с событиями: Обработка различных событий, таких как отправка формы, клики по кнопкам, изменения значений полей и т. д.
+
+
+- Рендеринг компонентов: Если вы используете фреймворк React или Vue.js, вам придется создать компоненты для отображения формы
+  и их динамического обновления в соответствии с вводом пользователя.
+
+
+- Управление состоянием: Вам нужно будет хранить и обновлять состояние формы, чтобы отслеживать изменения и управлять их обработкой.
+
+
+- Валидация данных: Вы должны проверить введенные пользователем данные на соответствие определенным требованиям, например, наличие обязательных полей, правильный формат даты или адреса электронной почты.
+
+
+- Создание собственного Ui-kit: Вам необходимо будет спроектировать и  разработать набор компонентов пользовательского интерфейса (UI), который может быть многократно использован в проектах для обеспечения единообразия и согласованности в дизайне и интеракции пользователей. Этот навык позволяет разработчикам эффективно работать над проектами, сокращая время разработки и обеспечивая качество и стиль.
+
+
+## Ресурсы
+
+- Макет проекта доступен по ссылке: [Figma](https://www.figma.com/file/7S2O5KurM4GkBO1nj30Zg4/Forms-(2-week)?type=design&node-id=2286%3A7698&mode=design&t=ATrrUxSxxTtIpupx-1)
+- Архив с JSON файлами форм: [Архив](/server/json)
+
+## Запуск проекта
+
+```
+npm install - устанавливаем зависимости
+npm run start:dev - запуск сервера + frontend проекта в dev режиме
+
+Используемая версия Node - v18.17.0
+```
+
+----
+
+## Адаптив
+
+Для корректного отображения на различных разрешениях используются медиа-запросы, которые поддерживают разрешения:
+1920px, 1024px, 375px, а также все промежуточные значения.
+
+----
+
+
 # Getting Started with Create React App
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-## Available Scripts
 
 In the project directory, you can run:
 
@@ -13,58 +60,3 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
