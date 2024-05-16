@@ -28,7 +28,7 @@
 ## Ресурсы
 
 - Макет проекта доступен по ссылке: [Figma](https://www.figma.com/file/7S2O5KurM4GkBO1nj30Zg4/Forms-(2-week)?type=design&node-id=2286%3A7698&mode=design&t=ATrrUxSxxTtIpupx-1)
-- Архив с JSON файлами форм: [Архив](/server/json)
+- Архив с JSON файлами форм: [Архив](https://disk.yandex.ru/d/sYLCYONyPCGI0A)
 
 ## Запуск проекта
 
