@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/daynamicform/static/css/main.3e210de8.css",
+    "main.js": "/daynamicform/static/js/main.fced56be.js",
+    "index.html": "/daynamicform/index.html",
+    "main.3e210de8.css.map": "/daynamicform/static/css/main.3e210de8.css.map",
+    "main.fced56be.js.map": "/daynamicform/static/js/main.fced56be.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.3e210de8.css",
+    "static/js/main.fced56be.js"
+  ]
+}
