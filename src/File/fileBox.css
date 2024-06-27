@@ -50,6 +50,16 @@
     background-color: #6E41E2;
     color: white;
 }
+.explain{
+    margin: 20px 0 0;
+    display: block;
+    color: #999;
+    text-align: center;
+    a{
+        text-decoration: none;
+        color: #6E41E2;
+    }
+}
 
 @media (max-width: 1023px){
     .fileBox > .main-form{
@@ -59,6 +69,9 @@
 @media (max-width: 767px){
     .fileBox > .main-form{
         width: 500px;
+    }
+    .explain{
+        margin: 80px auto 20px auto;
     }
 }
 @media (max-width: 600px){
@@ -74,15 +87,5 @@
 @media (max-width: 375px){
     .fileBox > .main-form{
         width: 300px;
-    }
-}
-.explain{
-    margin: 20px 0 0;
-    display: block;
-    color: #999;
-    text-align: center;
-    a{
-        text-decoration: none;
-        color: #6E41E2;
     }
 }
