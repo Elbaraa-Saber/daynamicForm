@@ -94,6 +94,7 @@ function FileBox(){
                 </form>
                 <input className='resetbtn' type="reset" value='Reset' onClick={handleReset}/>
             </form>
+            <span className='explain'>To try it You have to download these json files and try my code <a href='https://disk.yandex.ru/d/sYLCYONyPCGI0A'>Download</a></span>
             <div id="user-form" className='userContent disAppear' ref={disFormRef}>
                 <UserContact header={header} description={description} fields={fields} buttons={buttons}/>
             </div>
